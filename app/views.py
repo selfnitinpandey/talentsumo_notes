@@ -9,7 +9,7 @@ class NoteViewSet(viewsets.ModelViewSet):
     serializer_class = NoteSerializer
     authentication_class = [SessionAuthentication]
     permission_classes = [IsAuthenticatedOrReadOnly]
-
+    # for query return here
     def get_queryset(self):
         user = self.request.user
         if user.is_authenticated:
