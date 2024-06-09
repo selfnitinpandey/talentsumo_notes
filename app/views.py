@@ -7,6 +7,7 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly,IsAuthenticated
 class NoteViewSet(viewsets.ModelViewSet):
     queryset = Note.objects.all()
     serializer_class = NoteSerializer
+    print("serializer_class")
     authentication_class = [SessionAuthentication]
     permission_classes = [IsAuthenticatedOrReadOnly]
     # for query return here
